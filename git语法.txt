@@ -22,4 +22,5 @@ git reset --hard head^	///	get reset --hard head~1
 回溯到未来版本：
 	找到message对应的id如1094adb...，git reset --hard 1094a其中版本号只要前几位能找到唯一版本就可以了，不用写全
 git reflog:		记录每次命令
-git checkout --.txt:撤销修改，回到最近一次add或者commit后的状态
+git checkout --.txt:撤销修改，回到最近一次add或者commit后的状态。于是可以用作文件还原，比如误删文件的找回。前提是这个文件之前有被commit过
+cat fileName:查看文件内容
