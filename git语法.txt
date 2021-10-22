@@ -1,0 +1,21 @@
+pwd :		获取当前目录（目录在git或gitRepository目录下，git的指令才生效）
+git init:		进入一个空目录，这个指令会把这个目录变为Git可以管理的仓库repository
+
+git add 		某文件名:吧文件添加到库
+git commit -m 	"这是第几次修改" :可以多个add，但是最后都要一个commit。m是message，便于描述此次修改
+git status:	 	获取当前仓库状态。可以知道add后是否commit
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+这样是良好的
+
+git diff:		是difference，显示区别，可以看到被修改内容
+git log：		显示最近到最远的提交日志
+git log --pretty=oneline：	只显示一行，简化版，只有id和message
+回溯到过去版本：
+	head是当前版本，head^是回上一版本，head^^是俩，^^^是仨。head~n是n个版本
+git reset --hard head^	///	get reset --hard head~1
+回溯到未来版本：
+	找到message对应的id如1094adb...，git reset --hard 1094a其中版本号只要前几位能找到唯一版本就可以了，不用写全
+git reflog:		记录每次命令
